@@ -1,0 +1,176 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+{% block principal %}
+<!--Carrusel-->
+<div class="row center-md">			
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div id="carousel-1" class="carousel slide carrusel" data-ride="carousel">
+            <!--Indicadores-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-1" data-slide-to="1"></li>
+                <li data-target="#carousel-1" data-slide-to="2"></li>
+            </ol>
+            <!--Contenedores-->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="{% static 'img/carousel-1.jpg' %}" class="img-responsive imagencarrusel">
+                    <div class="carousel-caption">
+                        <h3>Perro 1</h3>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="{% static 'img/carousel-2.jpg' %}" class="img-responsive imagencarrusel">
+                    <div class="carousel-caption">
+                        <h3>Perro 2</h3>
+                    </div>
+                </div>
+            
+                <div class="item">
+                    <img src="{% static 'img/carousel-3.jpg' %}" class="img-responsive imagencarrusel">
+                    <div class="carousel-caption">
+                        <h3>Perro 3</h3>
+                    </div>
+                </div>
+            </div>
+            <!--Controles-->
+            <a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!--Redes Sociales-->
+<div class="row center-xs" style="margin-top: 5px;">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+        <div class="row around-xs">
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="redes">
+                    <a href="https://www.facebook.com" target="_blank"><img src="{% static 'img/facebook.png' %}" class="redes"></a>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="redes">
+                    <a href="https://plus.google.com" target="_blank"><img src="{% static 'img/googleplus.png' %}" class="redes"></a>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="redes">
+                    <a href="https://www.instagram.com" target="_blank"><img src="{% static 'img/instagram.png' %}" class="redes"></a>
+                </div>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                <div class="redes">
+                    <a href="https://www.gmail.com" target="_blank"><img src="{% static 'img/gmail.png' %}" class="redes"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>	
+</header>
+<!--Cuerpo-->
+<div class="row cuerpo">
+<div class="col-xs-12 col-sm-12 col-md-12">	
+<div class="row start-md">
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="titulos">
+                    <p align="right">RESCATE</p>
+                </div>
+            </div>
+        </div>
+        <div class="row end-xs">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="subtitulos">
+                    <p align="right">ETAPA UNO</p>	
+                    <hr class="hr" align="right">				
+                </div>
+            </div>
+        </div>
+        <div class="row end-xs" style="margin-right: 10px;">
+            <div class="col-xs-10 col-sm-10 col-md-10">
+                <div class="texto">
+                    <p>Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos y los preparamos para buscarles un hogar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row end-xs" style="margin-right: 10px;">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div>
+                    <img src="{% static 'img/rescate.jpg' %} " class="rescate">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6">
+        <div class="row start-xs">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                <div>
+                    <img src="{% static 'img/crowfunding.jpg' %} " class="crowfunding">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="titulos">
+                    <p>CROWFUNDING</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="subtitulos">
+                    <p>FINANCIAMIENTO</p>	
+                    <hr class="hr" align="left">				
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 10px; margin-bottom: 10px;">
+            <div class="col-xs-10 col-sm-10 col-md-12">
+                <div class="texto">
+                    <p>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que realizamos para obtener financiamiento para seguir ayudando.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-left: 10px; margin-bottom: 15px;">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <div>
+                    <a class="boton" href="#">CAMPAÑAS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!--Imagenes-->
+<div class="row center-xs" style="background-color: rgb(133,212,183); margin-top: 15px; margin-bottom: 15px;">
+<div class="col-xs-12 col-sm-12 col-md-6">
+<div class="contenedor">
+    <div class="caja"> 
+        <img src="{% static 'img/perro1.png' %}" alt="Nueve"> 
+        <img src="{% static 'img/perro4.png' %}" alt="Nueve"> 
+        <img src="{% static 'img/perro5.png' %}" alt="Nueve"> 
+    </div> 
+    <div class="caja largo"> 
+        <img src="{% static 'img/perro2.png' %}" alt="Nueve"> 
+        <img src="{% static 'img/perro6.png' %}" alt="Nueve"> 
+    </div> 
+    <div class="caja"> 
+        <img src="{% static 'img/perro3.png' %}" alt="Nueve"> 
+        <img src="{% static 'img/perro7.png' %}" alt="Nueve"> 
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

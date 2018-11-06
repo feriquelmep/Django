@@ -1,0 +1,26 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+{% block principal %}
+
+<form class="formu" method="POST">
+    <h1>Registro Mascota</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Enviar" class="btn-enviar">
+</form>
+
+<!-- <table>
+{% if mascota %}
+  <td>
+    <tr>Nombre Raza</tr>
+  </td>
+  {% for p in mascotas %}
+    <tr>{{ p.user.username }}{{ p.nombreMascota }}</tr>
+  {% endfor %}
+{% else %}
+  SIN MASCOTAS
+{% endif %}
+</table>  -->
+<!-- esta wea es pa ver si funciona -->
+
+{% endblock %}

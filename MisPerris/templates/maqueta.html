@@ -1,0 +1,74 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scalable=1.0, maxium-scale=1.0, minium-scale=1.0">
+	<link rel="stylesheet" href="{% static 'estilos/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'estilos/flexboxgrid.min.css' %}">
+	<!--Se pone el estilo propio para que sea el ultimo en cargar-->
+	<link rel="stylesheet" href="{% static 'estilos/estilo.css' %}">
+	<title>Mis Perris</title>
+</head>
+<body>
+<header class="row header">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="header2">
+                             <div align="center"><img src="{% static 'img/logo.png' %}" class="logo">
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="row center-md middle-md">
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <div class="menu">
+                            <div align="center"><a href="/index/" class="letramenu">Inicio</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <div class="menu">
+                            <div align="center"><a href="#" class="letramenu">Quienes Somos</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <div class="menu">
+                            <div align="center"><a href="/registroMascota/" class="letramenu">Registrar Mascota</a></div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <div class="menu">
+                            <div align="center"><a href="/registroPersona/" class="letramenu">Registrarse</a></div>
+                        </div>
+                    </div>
+                </div>	
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    {% block principal %}
+    {% endblock %}
+</div>
+
+<footer class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="pie">
+            Desarrollo Web y Mobile
+        </div>
+    </div>
+</footer>
+<script src="{% static 'javascript/js/jquery.js' %}"></script>
+<script src="{% static 'javascript/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
