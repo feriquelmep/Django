@@ -1,0 +1,14 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+
+
+{% block principal %}
+<form class="formul" method="POST">
+Login
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Ingresar" class="btn-enviar">
+¿Olvidaste tu contraseña?
+<a href="#"> Recupera aquí </a>	
+</form>
+{% endblock %}

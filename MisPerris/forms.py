@@ -1,5 +1,12 @@
 from django import forms
 
+
+#Formulario para el Login
+class LoginForm(forms.Form):
+    username=forms.CharField(widget=forms.TextInput(),label="Ingrese Usuario")
+    password=forms.CharField(widget=forms.PasswordInput(),label="Ingrese Contraseña")
+
+#Formulario para Registrar Persona
 class RegistrarPersonaForm(forms.Form):
     rutPersona=forms.CharField(widget=forms.TextInput(),label="Rut")
     passwordPersona=forms.CharField(widget=forms.PasswordInput(),label="Contraseña")
@@ -8,6 +15,7 @@ class RegistrarPersonaForm(forms.Form):
     viviendaPersona=forms.ChoiceField(choices=(('1', 'Casa con Patio Grande'),('2', 'Casa con Patio Pequeño'),('3', 'Casa sin Patio'),('4', 'Departamento')),label="Tipo Vivienda")
     #Lo de arriba, para la wea de ciudad y regiones de tshile
 
+#Formulario para Registrar una Mascota
 class RegistrarMascotaForm(forms.Form):
     fotoMascota=forms.ImageField(label="Imagen")
     nombreMascota=forms.CharField(widget=forms.TextInput(),label="Nombre")
