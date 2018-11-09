@@ -6,8 +6,8 @@ from django.urls import path
 urlpatterns=[
     url(r'^$', views.index, name="inicio"),
     url(r'^index/$', views.index, name="index"),
-    url(r'^login/$', views.login, name="login"),
+    url(r'^login/$', views.ingresar, name="login"),
     url(r'^registroPersona/$', views.registroPersona, name="RegistroPersona"),
     url(r'^registroMascota/$', views.registroMascota, name="RegistroMascota"),
-    url(r'^logout/$', views.logout, name="logout"),
+    url(r'^logout/$', views.salir, name="logout"),
 ]

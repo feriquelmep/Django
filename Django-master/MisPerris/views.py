@@ -34,7 +34,7 @@ def registroPersona(request):
     return render(request,"registro.html",{'form':form,'personas':personas,})
 
 #Vista Login
-def login(request):
+def ingresar(request):
     form=LoginForm(request.POST or None)
     if form.is_valid():
         data=form.cleaned_data
@@ -42,17 +42,17 @@ def login(request):
         if user is not None:
             login(request,user)
             return redirect('/index/')
-        else:
-    return render(request,"login.html",{'form':form,})
+    return render(request,"login.html",{'form':form})
 
 
 #Vista Logout
-def logout(request):
+def salir(request):
     logout(request)
     return redirect('/index/')
 
 
 #Vista Mascota
+#Registrar Mascota
 def registroMascota(request):
     mascotas=Mascota.objects.all()
     form=RegistrarMascotaForm(request.POST or None)
@@ -63,3 +63,6 @@ def registroMascota(request):
     form=RegistrarMascotaForm()
     return render(request,"registroMascota.html",{'form':form,'mascostas':mascotas})
 
+#Listar Mascota
+#Modificar Mascota
+#Eliminar Mascota
