@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scalable=1.0, maxium-scale=1.0, minium-scale=1.0">
+	<link rel="stylesheet" href="{% static 'estilos/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'estilos/flexboxgrid.min.css' %}">
+	<!--Se pone el estilo propio para que sea el ultimo en cargar-->
+	<link rel="stylesheet" href="{% static 'estilos/estilo.css' %}">
+	<title>Mis Perris</title>
+</head>
+<body style="background-color:rgb(133,212,183)">
+<header class="header row middle-xs">
+    <div class="col-xs-4">
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}">
+        </div>
+    </div>
+
+    <div class="col-xs-4"> 
+    <!-- ve si hay usuario logeado o no -->
+        {% if request.user.is_authenticated %}
+        <!-- si esta logeado muestra las dos opciones -->
+            {% if user.is_staff %}
+            <!-- si es admi muestra lo sgte -->
+                <nav>
+                    <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
+                    <div class="bordemenu"><a href="/registroPersona/" class="menu letramenu"> Registrar Persona </a></div>
+                    <div class="bordemenu"><a href="/registroMascota/" class="menu letramenu"> Registrar Mascota </a></div>
+                    <div class="bordemenu"><a href="/logout/" class="menu letramenu"> Cerrar Sesión </a></div>
+                </nav>
+            {% else %}
+            <!-- usuario normal -->
+                <nav>
+                    <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
+                    <div class="bordemenu"><a href="/index/" class="menu letramenu"> Quienes Somos </a></div>
+                    <div class="bordemenu"><a href="#" class="menu letramenu"> Adoptar </a></div>
+                    <div class="bordemenu"><a href="/logout/" class="menu letramenu"> Cerrar Sesión </a></div>
+                </nav>
+            {% endif %}
+        {% else %}
+        <!-- si no esta logueado -->
+            <nav>
+                <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
+                <div class="bordemenu"><a href="/index/" class="menu letramenu"> Quienes Somos </a></div>
+                <div class="bordemenu"><a href="/registroPersona/" class="menu letramenu"> Registrarse </a></div>
+                <div class="bordemenu"><a href="/login/" class="menu letramenu"> Ingresar </a></div>
+            </nav>  
+        {% endif %}  
+    </div>
+</header>
+
+<div class="container">
+    {% block principal %}
+    {% endblock %}
+</div>
+
+<footer class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="pie">
+            Desarrollo Web y Mobile
+        </div>
+    </div>
+</footer>
+<script src="{% static 'javascript/js/jquery.js' %}"></script>
+<script src="{% static 'javascript/js/bootstrap.min.js' %}"></script>
+</body>
+</html>
