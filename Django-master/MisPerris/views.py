@@ -58,10 +58,10 @@ def registroMascota(request):
     form=RegistrarMascotaForm(request.POST or None)
     if form.is_valid():
         data=form.cleaned_data
-        registroBD=Persona(fotoMascota=data.get("fotoMascota"), nombreMascota=data.get("nombreMascota"), razaMascota=data.get("razaMascota"), descripcionMascota=data.get("descripcionMascota"), estadoMascota=data.get("estadoMascota"))
-        registroBD.save()
+        registroDB=Persona(fotoMascota=data.get("fotoMascota"), nombreMascota=data.get("nombreMascota"), razaMascota=data.get("razaMascota"), descripcionMascota=data.get("descripcionMascota"), estadoMascota=data.get("estadoMascota"))
+        registroDB.save()
     form=RegistrarMascotaForm()
-    return render(request,"registroMascota.html",{'form':form,'mascostas':mascotas})
+    return render(request,"registroMascota.html",{'form':form,})
 
 #Listar Mascota
 #Modificar Mascota
