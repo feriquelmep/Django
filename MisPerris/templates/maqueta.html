@@ -11,37 +11,40 @@
 	<link rel="stylesheet" href="{% static 'estilos/estilo.css' %}">
 	<title>Mis Perris</title>
 </head>
-<body>
-<header>
-    <div class="logo">
-        <img src="{% static 'img/logo.png' %}">
-        <a href="/index/"> Mis Perris </a>
+<body style="background-color:rgb(133,212,183)">
+<header class="header row middle-xs">
+    <div class="col-xs-4">
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}">
+        </div>
     </div>
 
-    {% if request.user.is_authenticated %}
-        {% if user.is_staff %}
-            <nav>
-                <a href="/index/"> Inicio </a>
-                <a href="/registroPersona/"> Registrar Persona </a>
-                <a href="/registroMascota/"> Registrar Mascota </a>
-                <a href="/logout/"> Cerrar Sesión </a>
-            </nav>
+    <div class="col-xs-4">
+        {% if request.user.is_authenticated %}
+            {% if user.is_staff %}
+                <nav>
+                    <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
+                    <div class="bordemenu"><a href="/registroPersona/" class="menu letramenu"> Registrar Persona </a></div>
+                    <div class="bordemenu"><a href="/registroMascota/" class="menu letramenu"> Registrar Mascota </a></div>
+                    <div class="bordemenu"><a href="/logout/" class="menu letramenu"> Cerrar Sesión </a></div>
+                </nav>
+            {% else %}
+                <nav>
+                    <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
+                    <div class="bordemenu"><a href="/index/" class="menu letramenu"> Quienes Somos </a></div>
+                    <div class="bordemenu"><a href="#" class="menu letramenu"> Adoptar </a></div>
+                    <div class="bordemenu"><a href="/logout/" class="menu letramenu"> Cerrar Sesión </a></div>
+                </nav>
+            {% endif %}
         {% else %}
-             <nav>
-                <a href="/index/"> Inicio </a>
-                <a href="/index/"> Quienes Somos </a>
-                <a href="#"> Adoptar </a>
-                <a href="/logout/"> Cerrar Sesión </a>
-            </nav>
-        {% endif %}
-    {% else %}
-        <nav>
-            <a href="/index/"> Inicio </a>
-            <a href="/index/"> Quienes Somos </a>
-            <a href="/registroPersona/"> Registrarse </a>
-            <a href="/login/"> Ingresar </a>  
-        </nav>  
-    {% endif %}  
+            <nav>
+                <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
+                <div class="bordemenu"><a href="/index/" class="menu letramenu"> Quienes Somos </a></div>
+                <div class="bordemenu"><a href="/registroPersona/" class="menu letramenu"> Registrarse </a></div>
+                <div class="bordemenu"><a href="/login/" class="menu letramenu"> Ingresar </a></div>
+            </nav>  
+        {% endif %}  
+    </div>
 </header>
 
 <div class="container">
