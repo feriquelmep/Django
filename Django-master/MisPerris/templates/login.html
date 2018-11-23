@@ -7,8 +7,10 @@
 Login
 {% csrf_token %}
 {{ form.as_p }}
-<input type="submit" value="Ingresar" class="btn-enviar">
 ¿Olvidaste tu contraseña?
-<a href="#"> Recupera aquí </a>	
+<a href="#"> Recupera aquí </a><br>	
+<input type="submit" value="Ingresar" class="btn-enviar"><br>
+<a href="{% url 'social:begin' 'github' %}"><button type="button">Github Login</button></a><br>
+<!-- <a href="{% url 'social:begin' 'facebook' %}"><button type="button">Facebook Login</button></a> -->
 </form>
 {% endblock %}

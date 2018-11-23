@@ -7,8 +7,12 @@
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Enviar" class="btn-enviar">
+    <h6>--- OR SIGN UP WITH ---</h6>
+    <a href="{% url 'social:begin' 'github' %}"><button type="button">Github</button></a><br>
+
 </form>
-<table>
+
+<!-- <table>
 {% if personas %}
   <td>
     <tr>Rut Nombre Persona</tr>
@@ -19,7 +23,7 @@
 {% else %}
   SIN PERSONAS
 {% endif %}
-</table>  
+</table>  -->
 <!-- esta wea es pa ver si funciona -->
 
 {% endblock %}

@@ -19,12 +19,9 @@
         </div>
     </div>
 
-    <div class="col-xs-4"> 
-    <!-- ve si hay usuario logeado o no -->
+    <div class="col-xs-4">
         {% if request.user.is_authenticated %}
-        <!-- si esta logeado muestra las dos opciones -->
             {% if user.is_staff %}
-            <!-- si es admi muestra lo sgte -->
                 <nav>
                     <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
                     <div class="bordemenu"><a href="/registroPersona/" class="menu letramenu"> Registrar Persona </a></div>
@@ -32,7 +29,6 @@
                     <div class="bordemenu"><a href="/logout/" class="menu letramenu"> Cerrar Sesión </a></div>
                 </nav>
             {% else %}
-            <!-- usuario normal -->
                 <nav>
                     <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
                     <div class="bordemenu"><a href="/index/" class="menu letramenu"> Quienes Somos </a></div>
@@ -41,10 +37,9 @@
                 </nav>
             {% endif %}
         {% else %}
-        <!-- si no esta logueado -->
             <nav>
                 <div class="bordemenu"><a href="/index/" class="menu letramenu"> Inicio </a></div>
-                <div class="bordemenu"><a href="/registroMascota/" class="menu letramenu"> Rescatados </a></div>
+                <div class="bordemenu"><a href="/index/" class="menu letramenu"> Quienes Somos </a></div>
                 <div class="bordemenu"><a href="/registroPersona/" class="menu letramenu"> Registrarse </a></div>
                 <div class="bordemenu"><a href="/login/" class="menu letramenu"> Ingresar </a></div>
             </nav>  

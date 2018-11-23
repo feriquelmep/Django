@@ -4,11 +4,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.cd
 #Tabla de la Persona
-#La clase Usuario, por defecto, guarda username, password and email
 class Persona(models.Model):
-    usuario=models.OneToOneField(User,on_delete=models.CASCADE, primary_key=True)
-    nombrePersona=models.CharField(max_length=20)
-    apellidoPersona=models.CharField(max_length=20)
+    rutPersona=models.CharField(max_length=10,primary_key=True)
+    passwordPersona=models.CharField(max_length=10)
+    nombrePersona=models.CharField(max_length=10)
+    emailPersona=models.CharField(max_length=10)
     viviendaPersona=models.CharField(max_length=40)
 
 #Tabla de la Mascota
