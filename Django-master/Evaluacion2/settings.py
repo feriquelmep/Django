@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'MisPerris.apps.MisperrisConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

@@ -11,7 +11,15 @@ from django.contrib.auth.hashers import make_password
 from .models import Persona, Mascota
 from .forms import RegistrarPersonaForm, RegistrarMascotaForm, LoginForm
 
+from .serializers import PersonaSerializer
+from rest_framework import viewsets
+
 # Create your views here.
+
+class PersonaViewSet(viewsets.ModelViewSet):
+    queryset = Persona.objects.all()
+    serializer_class = PersonaSerializer
+
 #Vista Index
 def index(request):
     plantilla=loader.get_template("index.html")
